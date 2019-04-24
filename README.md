@@ -6,9 +6,20 @@ It was developed by Tomas Hurka, see more details ot its [web site](http://byacc
 
 ## Why ressuscite an old project?
 
-There is an annoying bug in its actual version, so I would like to provide a fix for it (as the original project does not seem to be active anymore).
+There is an annoying bug in its actual version (`1.15`), so I would like to provide a fix for it (as the original project does not seem to be active anymore).
 
-The main problem was that the present code was corrupting the stack, so the parser was not correctly working. The modification requires to additionally implement `clone` method in the semantic class.
+The main problem of 1.15 `byaccj` version is that the code is corrupting the stack, so the parser is not correctly working. This bug is corrected in the present version. However, the performed modification requires to additionally implement `clone` method in the semantic class `ParserVal`. It can be done as follows:
+```java
+   @Override
+   public ParserVal clone(){
+        try {
+            return (ParserVal) super.clone();
+        } catch (CloneNotSupportedException ex) {
+            ex.printStackTrace();
+        }
+        return null;
+   }
+```
 
 ## Why still use `byacc/j`?
 
