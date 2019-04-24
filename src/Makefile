@@ -5,8 +5,8 @@
 #################################################
 
 CC      = gcc
-CFLAGS  = -O -arch i386 -isysroot /Developer/SDKs/MacOSX10.4u.sdk -mmacosx-version-min=10.4
-LDFLAGS = -static -arch ppc -isysroot /Developer/SDKs/MacOSX10.4u.sdk
+#CFLAGS  = -O -arch i386 -isysroot /Developer/SDKs/MacOSX10.4u.sdk -mmacosx-version-min=10.4
+#LDFLAGS = -static -arch ppc -isysroot /Developer/SDKs/MacOSX10.4u.sdk
 TAR     = tar
 GZIP    = gzip
 VERS    = byaccj1.15
@@ -75,7 +75,7 @@ SRCS   = closure.c \
 	$(CC) -c $(CFLAGS) $(INC) $< -o $@
 
 yacc: $(OBJ)
-	$(CC) -o yacc -arch i386 -isysroot /Developer/SDKs/MacOSX10.4u.sdk -mmacosx-version-min=10.4 $(OBJ)
+	$(CC) -o byaccj $(OBJ)
 	@echo "done"
 
 clean:

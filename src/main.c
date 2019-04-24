@@ -118,7 +118,7 @@ void usage(void)
     fprintf(stderr,"  where -Joption is one or more of:\n");
     fprintf(stderr,"   -J\n");
     fprintf(stderr,"   -Jclass=className\n");
-    fprintf(stderr,"   -Jvalue=valueClassName (avoids automatic value class creation)\n");
+    fprintf(stderr,"   -Jsemantic=valueClassName (avoids automatic value class creation)\n");
     fprintf(stderr,"   -Jpackage=packageName\n");
     fprintf(stderr,"   -Jextends=extendName\n");
     fprintf(stderr,"   -Jimplements=implementsName\n");

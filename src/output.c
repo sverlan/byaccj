@@ -1208,7 +1208,7 @@ FILE *f;
     fprintf(code_file,"}\n");
     fprintf(code_file,"final %s dup_yyval(%s val)\n",jsemantic_type,jsemantic_type);
     fprintf(code_file,"{\n");
-    fprintf(code_file,"  return val;\n");
+    fprintf(code_file,"  return val.clone();\n");
     fprintf(code_file,"}\n");
     fprintf(code_file,"//#### end semantic value section ####\n");
       }
