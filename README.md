@@ -2,7 +2,7 @@
 
 `BYACC/J` is project that is an extension of the Berkeley v 1.8 YACC-compatible parser generator to produce C/C++ and Java parsers.
 
-It was developed by Tomas Hurka, see more details ot its [web site](http://byaccj.sourceforge.net/).
+It was developed by Tomas Hurka, see more details on his [web site](http://byaccj.sourceforge.net/).
 
 ## Why ressuscite an old project?
 
